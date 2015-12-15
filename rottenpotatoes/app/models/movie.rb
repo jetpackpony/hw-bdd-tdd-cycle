@@ -4,6 +4,7 @@ class Movie < ActiveRecord::Base
   end
 
   def self.get_same_director(director)
-
+    return [] unless director != ""
+    self.where director: director
   end
 end
